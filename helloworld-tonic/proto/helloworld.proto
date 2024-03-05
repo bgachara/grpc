@@ -1,0 +1,19 @@
+syntax = "proto3";
+package helloworld;
+
+//Service contains the actual RPC calls application will be using, it contains an Identifier, Request type, and returns a Response type.
+
+service Greeter {
+  //sayHello rpc accepts HelloRequets and returns HelloReturns
+  
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
